@@ -1,15 +1,13 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../header/header.component";
-import { FooterComponent } from "../footer/footer.component";
+import { HeaderComponent } from '../header/header.component';
 import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-customer-layout',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, RouterOutlet],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './customer-layout.component.html',
-  styleUrl: './customer-layout.component.css'
+  styleUrl: './customer-layout.component.css',
 })
-export class CustomerLayoutComponent {
-
-}
+export class CustomerLayoutComponent {}
