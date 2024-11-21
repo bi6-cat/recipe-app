@@ -1,1 +1,22 @@
-<p>about works!</p>
+<section class="contact text-center pt-8">
+    <h1 class="text-2xl font-semibold">Contact Us</h1>
+
+    <button type="button" (mouseover)="changeBackground()" class="p-2 bg-blue-500 border-0 text-white">Click me</button>
+    <span class="block">{{count}}</span>
+
+    <button type="button" (click)="increment()" class="p-2 bg-blue-500 border-0 text-white">Increment</button>
+    <button type="button" (click)="decrement()" class="p-2 bg-blue-500 border-0 text-white">Decrement</button>
+</section>
+
+<!-- Switch based on count value -->
+<button type="button" (click)="changeIndex(0)" class="p-2 bg-blue-500 border-0 text-white">Tab 1</button>
+<button type="button" (click)="changeIndex(1)" class="p-2 bg-blue-500 border-0 text-white">Tab 2</button>
+<button type="button" (click)="changeIndex(2)" class="p-2 bg-blue-500 border-0 text-white">Tab 3</button>
+<button type="button" (click)="changeIndex(3)" class="p-2 bg-blue-500 border-0 text-white">Tab 4</button>
+
+<div [ngSwitch]="index">
+    <p *ngSwitchCase="0">Tab 1 Content</p>
+    <p *ngSwitchCase="1">Tab 2 Content</p>
+    <p *ngSwitchCase="2">Tab 3 Content</p>
+    <p *ngSwitchCase="3">Tab 4 Contente</p>
+</div>

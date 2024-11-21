@@ -1,1 +1,28 @@
-<p>home works!</p>
+
+<app-input [type]="'email'" [label]="'Email'" [placeholder]="'Enter your email'"></app-input>
+<app-input [type]="'password'" [label]="'Password'" [placeholder]="'Enter your password'"></app-input>
+
+<section class="ng-class">
+    <h1 class="text-2xl font-semibold">Class</h1>
+    <button type="button" (click)="changeClass()" class="p-2 bg-blue-500 border-0 text-white">Change Class</button>
+    <div [ngClass]="isBlue ? 'bg-blue-500 text-white' : 'bg-cyan-500 text-red-500'" class="p-2">Contact Us</div>
+</section>
+
+<section class="ng-style">
+    <h1 class="text-2xl font-semibold">Style</h1>
+    <button type="button" (click)="changeStyle()" class="p-2 bg-blue-500 border-0 text-white">Change Style</button>
+    <div [ngStyle]="{'background-color': isRed ? 'blue' : 'cyan',
+                    'color': isRed ? 'red': 'white'}" class="p-2">Change Style</div>
+</section>
+
+
+<section class="new-recipes w-4/5 m-auto">
+    <h2 class="text-center text-2xl font-semibold">New Recipes</h2>
+    <app-recipe-list [recipes]="newRecipes" (add-item)="listenFromList($event)"></app-recipe-list>
+</section>
+<section class="new-recipes w-4/5 m-auto">
+    <h2 class="text-center text-2xl font-semibold">Best Selling</h2>
+    <app-recipe-list [recipes]="bestSellingRecipes" (add-item)="listenFromList($event)"></app-recipe-list>
+</section>
+
+<h3>{{selectedRecipe.name}}</h3>

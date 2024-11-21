@@ -22,6 +22,7 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
+    // Redirect any other route to home
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
