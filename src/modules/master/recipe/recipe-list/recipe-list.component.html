@@ -1,0 +1,7 @@
+<div class="recipe-list flex items-center flex-wrap">
+    <ng-container *ngFor="let item of recipes; let i = index">
+        <span>{{i+1}}</span>
+        <app-recipe-item *ngIf="item.orders <= 0" class="w-1/4 p-4" [recipe]="item"
+            (add-to-cart)="addItem($event)"></app-recipe-item>
+    </ng-container>
+</div>

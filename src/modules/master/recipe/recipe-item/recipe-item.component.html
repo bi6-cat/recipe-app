@@ -1,0 +1,13 @@
+<div class="item">
+    <div class="item-image">
+        <img class="w-full" [src]="recipe.image" alt="Recipe Image">
+    </div>
+    <div class="item-content">
+        <h3>{{recipe.name}}</h3>
+        <p>{{recipe.description}}</p>
+        <p>{{recipe.orders}}</p>
+        <div class="actions">
+            <button class="p-2 px-4 bg-blue-500 text-white rounded-full" (click)="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+</div>
